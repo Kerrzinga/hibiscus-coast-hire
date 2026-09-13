@@ -122,7 +122,7 @@
     <div class="brand">Hibiscus Coast <span>Hire</span></div>
     <nav class="nav-links">
       <a href="tel:+64272472281" class="nav-phone">027 247 2281</a>
-      <a href="#contact" class="btn btn-dark nav-cta">Book now</a>
+      <a href="#contact" class="btn btn-dark nav-cta">Enquire now</a>
     </nav>
   </div>
 </header>
@@ -180,8 +180,9 @@
 <section class="pad soft" id="delivery">
   <div class="wrap">
     <div class="eyebrow">Delivery</div>
-    <h2 class="sec-title">Free across the Hibiscus Coast</h2>
-    <p class="delivery-body">Free delivery and pick-up anywhere on the Hibiscus Coast. I'm flexible with timing, so I can drop off before your event and collect after, and nothing's rushed on the day. Just outside the area? Get in touch and I'll let you know.</p>
+    <h2 class="sec-title">Free delivery across the Hibiscus Coast</h2>
+    <p class="delivery-body">Free delivery and pick-up across the Hibiscus Coast for most orders. I'm flexible with timing, so I can drop off before your event and collect after, and nothing's rushed on the day. Just outside the area? Get in touch and I'll let you know.</p>
+    <p class="delivery-body" style="font-size:14px; margin-top:12px;">Large-volume orders that require additional transport may incur a delivery and collection charge. This will always be confirmed with you before booking.</p>
   </div>
 </section>
 
@@ -202,9 +203,9 @@
 <!-- CONTACT -->
 <section class="pad soft" id="contact">
   <div class="wrap">
-    <div class="eyebrow">Book your date</div>
+    <div class="eyebrow">Get in touch</div>
     <h2 class="sec-title">Tell me what you need</h2>
-    <p class="sec-sub">How many of each, and when. I'll get back to you to confirm it's available and send bank details to lock it in.</p>
+    <p class="sec-sub">Got an event in mind? Send me a message and we can work out the details together.</p>
     <div class="contact-grid">
       <div>
         <!-- Phone is live. Email is a placeholder; add a real one or leave it out. -->
@@ -213,29 +214,26 @@
       </div>
       <div>
         <form action="https://formsubmit.co/hibiscuscoasthire@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Hibiscus Coast Hire booking request">
+          <input type="hidden" name="_subject" value="New Hibiscus Coast Hire enquiry">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
           <label for="name">Your name</label>
-          <input id="name" name="name" required placeholder="Jane Smith">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" placeholder="021 234 5678">
-          <label for="date">Date needed</label>
-          <input id="date" name="date" type="date">
-          <label for="address">Delivery address</label>
-          <input id="address" name="address" placeholder="e.g. 12 Beach Road, Ōrewa">
-          <div>
-            <label>How many?</label>
-            <div class="qty-row">
-              <input id="qty_tables" name="qty_tables" type="number" min="0" placeholder="Tables">
-              <input id="qty_chairs" name="qty_chairs" type="number" min="0" placeholder="Chairs">
-              <input id="qty_covers" name="qty_covers" type="number" min="0" placeholder="Covers">
-            </div>
+          <input id="name" name="name" autocomplete="name" required>
+          <label for="contact-details">Phone or email</label>
+          <input id="contact-details" name="contact" type="text" required>
+          <label for="message">How can I help?</label>
+          <div id="message-help" class="cnote" style="margin:0 0 10px;">
+            <p>Message with:</p>
+            <ul style="padding-left:20px; margin:4px 0 8px;">
+              <li>Event date</li>
+              <li>Address</li>
+              <li>Number of tables/chairs/covers needed</li>
+            </ul>
+            <p>Rough details are fine if you're still making plans.</p>
           </div>
-          <label for="notes">Anything else?</label>
-          <textarea id="notes" name="notes" rows="2" placeholder="e.g. delivery the day before, weekend event"></textarea>
-          <button type="submit" class="btn btn-primary">Send booking request</button>
-          <p id="formnote">This sends a booking request by email. I'll reply to confirm availability, total price and payment details.</p>
+          <textarea id="message" name="message" rows="6" required aria-describedby="message-help" style="resize:vertical;"></textarea>
+          <button type="submit" class="btn btn-primary">Send enquiry</button>
+          <p id="formnote">Your enquiry comes straight to me by email. I'll get back to you to chat through the details.</p>
         </form>
       </div>
     </div>
